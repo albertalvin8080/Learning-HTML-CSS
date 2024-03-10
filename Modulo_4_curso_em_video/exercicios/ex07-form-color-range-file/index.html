@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        div {
+            margin: 10px 0;
+        }
+        input[type=checkbox] {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testing more Forms</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Text-Number-Password-Month-Date-Time</legend>
+            <div>
+                <label for="name">Name:</label><br>
+                <input type="text" name="name" id="name" autocomplete="username" placeholder="ex: Jujubinha" required>
+            </div>
+            <div>
+                <label for="password">Password:</label><br>
+                <input type="password" name="password" id="password" minlength="5" maxlength="8">
+            </div>
+            <div>
+                <label for="age">Age:</label><br>
+                <input type="number" name="age" id="age" min="18" max="100" step="1">
+            </div>
+            <div>
+                <label for="month">Month:</label><br>
+                <input type="month" name="month" id="month">
+            </div>
+            <div>
+                <label for="date">Date:</label><br>
+                <input type="date" name="date" id="date">
+            </div>
+            <div>
+                <label for="time">Time:</label><br>
+                <input type="time" name="time" id="time" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Email-Tel-Check-Radio</legend>
+            <div>
+                <label for="email">E-mail:</label><br>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="tel">Tel:</label><br>
+                <input type="tel" name="tel" id="tel" pattern="\d{4,5}-\d{4}">
+            </div>
+            <div>
+                <input type="checkbox" name="dead-cells" id="dead-cells">
+                <label for="dead-cells">Dead Cells</label><br>
+                <input type="checkbox" name="blasphemous" id="blasphemous">
+                <label for="blasphemous">Blasphemous</label><br>
+                <input type="checkbox" name="dark-souls" id="dark-souls">
+                <label for="dark-souls">Dark Souls</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" id="male" value="M">
+                <label for="male">Male</label><br>
+                <input type="radio" name="gender" id="female" value="F">
+                <label for="female">Female</label><br>
+                <input type="radio" name="gender" id="non-binary" value="NON">
+                <label for="non-binary">Non-binary</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Color-Range-File</legend>
+            <div>
+                <label for="color">Color:</label><br>
+                <input type="color" name="color" id="color" value="#00ff00">
+            </div>
+            <div>
+                <label for="range">Range:</label><br>
+                <input type="range" name="range" id="range" value="500" min="100" max="1000" step="200">
+            </div>
+            <div>
+                <label for="file">File:</label><br>
+                <input type="file" name="file" id="file">
+            </div>
+        </fieldset>
+
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>

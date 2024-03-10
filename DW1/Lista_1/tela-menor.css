@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+
+
+div.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    'cabecalho'
+    'conteudo';
+}
+
+header#cabecalho {
+    width: 100%;
+    grid-area: cabecalho;
+    padding: 35px;
+
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    margin-top: 0px;
+}
+
+
+
+main#conteudo {
+    width: 100%;
+    grid-area: conteudo;
+    padding: 20px;
+}

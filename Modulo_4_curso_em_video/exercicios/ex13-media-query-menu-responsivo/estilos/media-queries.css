@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/* media queries */
+
+header > menu > span#menu-icon {
+    display: none;
+}
+
+header > menu > ul#icons {
+    display: block;
+}
+
+header > menu > ul#icons > li {
+    display: inline-block;
+}
+
+/* o seletor com o caminho mais completo prevalece */
+header > menu > ul#icons > li > a {
+    border-top: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+main {
+    width: 768px;
+}
+

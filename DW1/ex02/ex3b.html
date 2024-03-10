@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 5px 0 14px 0;
+            gap: 5px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+                "login email email"
+                "senha sCaixa sCaixa"
+                "tipo escolha .";
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Iniciar Sessão</legend>
+            <div class="container">
+                <label for="iemail" style="grid-area: login;">Login:</label>
+                <input type="email" name="email" id="iemail" placeholder="e-mail" style="grid-area: email;" />
+                <label for="isenha" style="grid-area: senha;">Senha:</label>
+                <input type="password" name="senha" id="isenha" placeholder="senha" style="grid-area: sCaixa;"/>
+                <label for="itipo" style="grid-area: tipo;">Tipo:</label>
+                <select name="tipo" id="itipo" style="grid-area: escolha;">
+                    <option disabled selected>-- escolha --</option>
+                    <option value="aluno">Aluno</option>
+                    <option value="prof">Professor</option>
+                    <option value="adm">Administrador</option>
+                </select>
+            </div>
+
+            <div style="display: block">
+                <input type="submit" value="Submeter" />
+                <input type="reset" value="Resetar" />
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

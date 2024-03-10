@@ -1,0 +1,270 @@
+@charset "UTF-8";
+
+/* HEADER */
+
+header {
+    flex-direction: row;
+}
+
+header .menu {
+    width: fit-content;
+    /* border: 1px solid black; */
+}
+
+header .menu div {
+    display: flex;
+}
+
+.menu li {
+    font-size: 1em;
+    width: 110px;
+    padding: 20px;
+    /* border: 1px solid black; */
+}
+
+
+/* BANNER */
+
+.banner h1 {
+    font-size: 4em;
+    text-shadow: 0px 0px 5px black;
+    margin-bottom: 60px;
+}
+
+.banner h2 {
+    font-size: 2.5em;
+    margin-bottom: 60px;
+}
+
+.banner a {
+    color: black;
+    opacity: 0.9;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.banner a:hover {
+    opacity: 1;
+}
+
+
+/* conheça-o-hp */
+
+.conheça-o-hp {
+    margin-top: 150px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+.conheça-o-hp h1 {
+    font-size: 4em;
+    margin-bottom: 70px;
+}
+
+.conheça-o-hp p {
+    font-size: 2em;
+    margin-bottom: 70px;
+    padding: 0px 40px;
+}
+
+.conheça-o-hp hr {
+    width: 400px;
+    /* border: 0; */
+    background-color: black;
+    margin-bottom: 70px;
+    border: 0;
+    height: 2px;
+}
+
+
+/* GRID */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /* border: 1px solid black; */
+    padding: 10px;
+    background-color: white;
+}
+
+.grid .small {
+    background-clip: content-box;
+    padding: 30px;
+    height: 400px;
+    flex-basis: 40%;
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 0;
+}
+
+.grid .large {
+    background-clip: content-box;
+    padding: 30px;
+    height: 400px;
+    flex-basis: 60%;
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 0;
+    /* border: 1px solid black; */
+}
+
+
+/* INFO */
+
+.info {
+    width: 100%;
+    background-color: #191A02;
+    color: white;
+    margin-top: 180px;
+    padding: 120px 40px;
+}
+
+.info h1 {
+    text-align: center;
+    font-size: 4em;
+    margin-bottom: 30px;
+}
+
+.info p {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 150px;
+}
+
+.info ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.info ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info ul li span {
+    font-size: 3em;
+    color: gold;
+}
+
+.info ul li h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: gold;
+    margin-bottom: 30px;
+}
+
+.info ul li p {
+    font-size: 1.5em;
+}
+
+
+/* NEWSLETTER */
+
+.newsletter {
+    padding: 150px 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter h1 {
+    font-size: 4em;
+    margin-bottom: 70px;
+}
+
+.newsletter p {
+    margin-bottom: 70px;
+    font-size: 2em;
+}
+
+.newsletter hr {
+    width: 400px;
+    margin-bottom: 70px;
+    background-color: black;
+    height: 2px;
+    border: 0;
+}
+
+.newsletter form {
+    /* border: 1px solid black; */
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 10px;
+}
+
+.newsletter form input {
+    flex-basis: 0;
+    padding: 30px 20px;
+    flex-grow: 1;
+    /* height: 20px; */
+    font-size: 1.7em;
+    margin-right: 0px;
+}
+
+.newsletter form button {
+    border: none;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    opacity: 0.85;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.newsletter form button:hover {
+    opacity: 1;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 100px;
+    background-color: #191A02;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .social-icons {
+    list-style-type: none;
+    color: gold;
+    display: flex;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+footer i {
+    font-size: 3em;
+}
+
+footer p {
+    font-size: 1.8em;
+    color: white;
+}

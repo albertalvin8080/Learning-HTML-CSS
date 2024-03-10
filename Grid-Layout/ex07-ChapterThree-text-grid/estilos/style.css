@@ -1,0 +1,96 @@
+@charset "UFT-8";
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+}
+
+:root {
+    --yellow: #ffc600;
+    --verylightgray: #FAFAFA;
+}
+
+main {
+    padding: 10px;
+    margin-top: 40px;
+    font-family: Cambria, Cochin, Georgia, 'Times New Roman', Times, serif;
+    color: #444;
+
+    display: grid;
+    grid-template-columns: 3fr 12fr 5fr;
+    gap: 50px;
+}
+
+main > * {
+    grid-column: 2 / -2;
+}
+
+main h1 {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 5em;
+
+}
+
+main > p {
+    align-self: center;
+    font-size: 1.25em;
+    line-height: 1.75;
+}
+
+.tip {
+    background-color: var(--verylightgray);
+    padding: 20px 10px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    line-height: 1.85;
+    font-size: 1.25em;
+    gap: 25px;
+}
+
+.tip strong {
+    text-decoration: underline wavy var(--yellow);
+}
+
+.tip img {
+    width: 100%;
+}
+
+.tip-right {
+    grid-column: 3/-1;
+    border-left: 3px solid var(--yellow);
+    text-align: left;
+}
+
+.tip-left {
+    grid-column: 1/2;
+    border-right: 3px solid var(--yellow);
+    text-align: right;
+}
+
+.tip#gemaplys {
+    grid-row: span 4;
+}
+
+main h2 {
+    font-size: 3.9em;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    grid-column: 1/-1;
+    margin: 50px 0;
+}
+
+figure {
+    grid-column: 1/-1;
+    /* object-fit: contain; */
+}
+
+figure img {
+    width: 100%;
+    height: 300px;
+}

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: lightgray;
+    padding: 10px;
+    gap: 10px;
+    display: grid;
+    grid-template-areas: 
+    'a'
+    'b'
+    'd'
+    'd'
+    'd'
+    'd'
+    'c'
+    'e'
+    'f'
+    ;
+}
+
+div {
+    background-color: darkblue;
+    color: white;
+}
+
+#a {grid-area: a;}
+#b {grid-area: b;}
+#c {grid-area: c;}
+#d {grid-area: d;}
+#e {grid-area: e;}
+#f {grid-area: f;}

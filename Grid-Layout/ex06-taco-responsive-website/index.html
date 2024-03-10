@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilos/desktop.css">
+    <link rel="stylesheet" href="estilos/mobile.css" media="screen and (max-width: 768px)">
+</head>
+<body onresize="screen_size()">
+    <div class="wrapper">
+        <header>
+            <div class="hero">
+                <h1>Terry's Taco Joint</h1>
+                <p>Pretty good tacos!</p>
+            </div>
+            <div class="prices">
+                <div class="price">
+                    <h2>R$4.99</h1>
+                    <p>Taco</p>
+                </div>
+                <div class="price">
+                    <h2>R$7.99</h1>
+                    <p>Kombucha</p>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navigator">
+            <a href="#">Tacos</a>
+            <a href="#">Beers</a>
+            <a href="#">wines</a>
+            <a href="#">Desserts</a>
+            <a href="#">Reservations</a>
+        </nav>
+
+        <div class="attractives">
+            <div class="attractive-item">
+                <span class="emoji">🌮</span>
+                <h2>Tacos</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+            <div class="attractive-item">
+                <span class="emoji">🍺</span>
+                <h2>Beer</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+            <div class="attractive-item">
+                <span class="emoji">🍷</span>
+                <h2>Wine</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+            <div class="attractive-item">
+                <span class="emoji">🎵</span>
+                <h2>Music</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+        </div>
+
+        <div class="taco-photo">
+            <img src="imagens/queso-taco.png" alt="queso-taco">
+            <div class="description">
+                <h2>Featured Taco</h2>
+                <p>Slim Profile, easy to hold and loaded with cheese.</p>
+                <p>This is the one you have been waiting for</p>
+                <button>Learn More<i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+        </div>
+
+        <div class="instant-grams">
+            <h2>Instant Grams</h2>
+            <img src="imagens/201x201.jpg" alt="photo">
+            <img src="imagens/202x202.jpg" alt="photo">
+            <img src="imagens/203x203.jpg" alt="photo">
+            <img src="imagens/204x204.jpg" alt="photo">
+            <img src="imagens/jean_xeroso.webp" alt="photo">
+            <img src="imagens/205x205.jpg" alt="photo">
+            <img src="imagens/206x206.jpg" alt="photo">
+            <img src="imagens/207x207.jpg" alt="photo">
+            <img src="imagens/207x208.jpg" alt="photo">
+            <img src="imagens/207x209.jpg" alt="photo">
+        </div>
+    </div>
+    <script>
+        function screen_size() {
+            console.log("width: " + window.innerWidth);
+            console.log("height: " + window.innerHeight);
+        }
+    </script>
+</body>
+</html>

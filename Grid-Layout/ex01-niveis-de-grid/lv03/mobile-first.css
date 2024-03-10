@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: gold;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+    padding: 10px;
+    row-gap: 10px;
+}
+
+div {
+    background-color: blue;
+}
+
+#a {
+    grid-row: 1/5;
+}
+
+#b {
+    grid-row: 5/11;
+}
+
+#c {
+    grid-row: 11/13;
+}
+

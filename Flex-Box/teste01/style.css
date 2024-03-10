@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: gray;
+    /* width: 100vw; */
+    height: 700px;
+    display: flex;
+
+    align-content: stretch; /* espaco gerado porque ja existe height, tenter center */
+    flex-wrap: wrap-reverse;
+    /* flex-direction: row-reverse; */
+    /* justify-content: space-between; */
+}
+
+.content {
+    background-color: black;
+    color: white;
+    width: 40%;
+    height: 30%;
+    border: 1px solid white;
+}

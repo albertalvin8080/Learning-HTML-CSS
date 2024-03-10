@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+:root {
+    --cor01: #49a09d;
+    --cor02: #5f2c82;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-image: linear-gradient(to bottom, var(--cor02), var(--cor01));
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main > section {
+    margin: auto;
+    border-radius: 10px;
+    width: 260px;
+    height: 516px;
+    /* border: 5px solid black; */
+}
+
+div#image {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.64);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 220px;
+    background-size: cover;
+    background-color: black;
+    background-position: center center;
+    background-image: url('../imagens/pexels-mantas-sinkevičius-1106476.jpg');
+}
+
+div#login {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.64);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+div#login > h1 {
+    text-align: center;
+    font-weight: 800;
+}
+
+div#login > p {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+div#login input, label {
+    vertical-align: middle;
+    border: 0;
+    padding-left: 5px;
+}
+
+div#login input {
+    border-radius: 10px;
+    height: 30px;
+    width: 190px;
+}
+
+div#form-email, div#form-password {
+    width: 235px;
+    /* height: 30.4px; */
+    margin: 5px auto;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--cor02);
+    padding: 2px;
+}
+
+label.material-symbols-outlined {
+    color: white;
+    font-size: 30px;
+    /* padding: 0px 5px; */
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+}
+
+div#form-submit {
+    text-align: center;
+}
+
+div#form-submit > input:hover {
+    background-color: #94cfcb;
+}
+
+div#form-submit > input {
+    width: 230px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px;
+    box-sizing: content-box;
+    background-color: var(--cor01);
+}
+
+div#login > p {
+    margin-top: 5px;
+}
+
+div#login > p > a#forgot-password > span {
+    vertical-align: middle;
+}
+
+div#login > p > a#forgot-password {
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid var(--cor01);
+}
+
+div#login > p > a#forgot-password:hover {
+    background-color: #bbe9e7;
+    /* color: white; */
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        div {
+            margin: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testing Forms</h1>
+
+    <form action="cadastro.php" method="post">
+        <fieldset>
+            <legend>Select-Datalist-Textarea</legend>
+            <div>
+                <label for="igames">Best Game:</label><br>
+                <select name="games" id="igames">
+                    <optgroup label="Rogue-like">
+                        <option value="dc">Dead Cells</option>
+                        <option value="etg">Enter the Gungeon</option>
+                    </optgroup>
+
+                    <optgroup label="Metroidvania">
+                        <option value="bpm">Blasphemous</option>
+                        <option value="hk">Hollow Knight</option>
+                        <option value="av">Axiom Verge</option>
+                    </optgroup>
+
+                    <optgroup label="Souls-like">
+                        <option value="ms">Mortal Shell</option>
+                        <option value="ss">Salt and Sanctuary</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <label for="iprofissao">Profissão:</label><br>
+                <input type="text" name="profissao" id="iprofissao" list="dl-profissao">
+                <datalist id="dl-profissao">
+                    <option>Carpinteiro</option>
+                    <option>Necromancer</option>
+                    <option>Cornomancer</option>
+                </datalist>
+            </div>
+            <div>
+                <label for="imensagem">Mensagem:</label><br>
+                <textarea name="mensagem" id="imensagem" cols="30" rows="10"></textarea>
+            </div>
+        </fieldset>
+
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>

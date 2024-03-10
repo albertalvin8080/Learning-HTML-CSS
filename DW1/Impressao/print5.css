@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --lora: 'Lora', serif;
+    --balthazar: 'Balthazar', serif;
+    --EBGaramond: 'EB Garamond', serif;
+    --RobotoSlab: 'Roboto Slab', serif;
+    --CormorantGaramond: 'Cormorant Garamond', serif;
+    --color01: #ff0000;
+    --color02: #dddddd;
+    --color03: #808080;
+    --margin01: 15pt;
+}
+
+@page {
+    margin: 7% initial;
+}
+
+@page:first {
+    margin: 0;
+}
+
+@page:left {
+    @top-right {
+        content: counter(page);
+    }
+    @top-center {
+        content: string(h2-text);
+        border-bottom: 0.75pt solid black;
+        width: 410pt;
+        padding-top: 15.5pt;
+        margin-bottom: 24pt;
+    }
+}
+
+@page:right {
+    @top-left {
+        content: counter(page);
+    }
+    @top-center {
+        content: string(h1-text);
+        border-bottom: 0.75pt solid black;
+        width: 410pt;
+        padding-top: 15.5pt;
+        margin-bottom: 24pt;
+    }
+}
+
+@page:nth(2) { /* colocar sempre no final dos @page por causa do overwrite */
+    @top-right {
+        content: '';
+    }
+    @top-center {
+        content: '';
+        border-bottom: 0;
+    }
+}
+
+body {
+    column-count: 2;
+    column-fill: balance; /* colunas de tamanhos iguais */
+    counter-reset: chapter;
+}
+
+section[data-type="titlepage"] {
+    margin-top: 85.3pt;
+    break-after: page;
+    font-family: var(--RobotoSlab);
+    text-align: center;
+    position: relative;
+    height: 224.5pt;
+    column-span: all;
+}
+
+section[data-type="titlepage"] header h1 {
+    color: var(--color01);
+    font-size: 3em;
+    text-transform: uppercase;
+    string-set: h1-text content();
+}
+
+section[data-type="titlepage"] header p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.335em;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section[data-type="titlepage"] > p {
+    margin-top: 101.5pt;
+}
+
+
+section[data-type="chapter"] {
+    font-family: var(--RobotoSlab);
+}
+
+section[data-type="chapter"] > h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color02);
+    text-align: right;
+    padding: 30pt 10pt 10pt 0;
+    margin-top: 53pt;
+    margin-bottom: var(--margin01);
+    font-weight: bold;
+    position: relative;
+    column-span: all;
+    string-set: h2-text content();
+}
+
+section[data-type="chapter"] > h2::after {
+    content: counter(chapter);
+    counter-increment: chapter;
+    font-style: italic;
+    font-size: 2em;
+    color: #999999;
+    position: absolute;
+    top: -20pt;
+    right: -5pt;
+}
+
+section[data-type="chapter"] p {
+    text-align: justify;
+    text-indent: 28.5pt;
+}
+
+section[data-type="chapter"] > p:first-of-type {
+    text-indent: 0;
+}
+
+section[data-type="chapter"] p + p {
+    margin-top: 3.5pt;
+}
+
+section[data-type="chapter"] h3, section[data-type="chapter"] h4 {
+    margin: var(--margin01) 0;
+}
+
+
+section[data-type="sect2"] > p:nth-of-type(2) {
+    margin-bottom: calc(var(--margin01) + 10pt);
+}
+
+div[data-type="example"] {
+    -prince-float-placement: left; /* burla o column-fill: balance;, o mesmo que float: left; */
+    -prince-float-reference: column;
+    /* RIP: jaz aqui margin-top por questoes de float */
+    padding: 10pt;
+    break-after: page;
+    border: 0.75pt solid grey;
+}
+
+div[data-type="example"] h5 {
+    font-size: 1.5em;
+    margin-bottom: 10pt;
+    border-bottom: 0.75pt solid grey;
+}
+
+
+figure {
+    counter-reset: figura;
+}
+
+figure figcaption {
+    text-align: justify;
+    font-weight: bold;
+}
+
+figure figcaption::before {
+    content: 'Figura ' counter(chapter) '.' counter(figura);
+    counter-increment: figura;
+    font-family: var(--balthazar);
+    color: var(--color03);
+    margin-right: 20pt;
+    font-size: 1.5em;
+}
+
+figure img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+table {
+    column-span: all; /* força column-fill: balance; em elementos anteriores */
+    break-before: page;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin-top: 50pt;
+    margin-bottom: 25pt;
+    counter-reset: tbl;
+    box-shadow: 0 0 4pt rgba(0, 0, 0, 0.299);
+}
+
+table caption {
+    font-weight: bold;
+}
+
+table caption::before {
+    content: 'Table ' counter(chapter) '.' counter(tbl);
+    counter-increment: tbl;
+    font-size: 1.5em;
+    font-family: var(--balthazar);
+    color: var(--color03);
+    margin-right: 20pt;
+}
+
+table thead th {
+    background-color: var(--color03);
+    color: white;
+    padding: 15pt 25pt 15pt 15pt;
+    text-align: left;
+    text-shadow: 0.8pt 0.8pt 0.1pt rgba(0, 0, 0, 0.5);
+}
+
+tbody th, tbody td {
+    padding: 15pt 0 15pt 15pt;
+    border-bottom: 1pt solid var(--color03);
+    text-align: left;
+}
+
+tbody th {
+    font-weight: bold;
+    text-align: center;
+}
+
+tbody td {
+    font-size: 0.83em;
+    color: #808081;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: #eeeeee;
+}
+
+tfoot td {
+    text-align: center;
+}
+
+
+section[data-type="glossary"] {
+    break-before: page;
+    border-top: 1.5pt solid black;
+    float: left; /* burla o column-fill: balance; */
+}
+
+section[data-type="glossary"] h2 {
+    margin-bottom: 10pt;
+}
+
+dl[data-type="glossary"] dt {
+    float: left;
+    clear: left;
+    margin-right: 15pt;
+    font-weight: bold;
+}
+
+dl[data-type="glossary"] dd {
+    display: inline;
+}

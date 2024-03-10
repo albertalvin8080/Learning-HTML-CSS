@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(123, 194, 187);
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 300px;
+    height: 900px;
+    position: relative;
+    /* text-align: center; */
+}
+
+thead, tfoot {
+    color: white;
+    background-color: #383838;
+}
+
+/* thead > tr > th */
+thead 
+{ 
+    position: sticky;
+    top: 0;
+}
+
+tbody > tr:nth-child(2n-1) { /* odd */
+    background-color: #f0f0f0;
+}
+
+tbody > tr:nth-child(2n) { /* even */
+    background-color: lightgrey;
+}
+
+caption, th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+td {
+    text-align: left;
+    /* vertical-align: middle; */
+}
+
+td.number {
+    text-align: right;
+}
+
+td > img {
+    vertical-align: middle;
+    width: 33px;
+    height: 22px;
+}
+
+td > a {
+    vertical-align: middle;
+    padding-left: 7px;
+}

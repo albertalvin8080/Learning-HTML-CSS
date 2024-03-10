@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Forms</title>
+    <style>
+        div {
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testing Forms</h1>
+
+    <form action="teste.php" method="post" autocomplete="on">
+        <div>
+            <label for="iusername">Username:</label><br>
+            <input type="text" name="username" id="iusername" required minlength="4" maxlength="18" placeholder="ex: Jujubinha" autocomplete="username">
+        </div>
+
+        <div>
+            <label for="ipw">Password:</label><br>
+            <input type="password" name="pw" id="ipw" required minlength="5"
+            maxlength="8" autocomplete="current-password">
+        </div>
+
+        <div>
+            <label for="inumber">Number:</label><br>
+            <input type="number" name="number" id="inumber" required step="0.1" min="0" max="10">
+        </div>
+
+        <div>
+            <label for="imonth">Month:</label><br>
+            <input type="month" name="month" id="imonth" value="1000-02" required>
+        </div>
+
+        <div>
+            <label for="idate">Date:</label><br>
+            <input type="date" name="date" id="idate" required>
+        </div>
+
+        <div>
+            <label for="itime">Time:</label><br>
+            <input type="time" name="time" id="itime" required value="23:00">
+        </div>
+
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>

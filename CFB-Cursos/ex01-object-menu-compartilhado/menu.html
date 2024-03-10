@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu COmpartilhado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: sans-serif;
+        }
+        nav {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            background-color: gold;
+            font-weight: 900;
+            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+            height: 50px;
+
+            display: grid;
+            align-content: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html" target="_parent">Home</a>
+        <a href="pg2.html" target="_parent">Pg-2</a>
+        <a href="pg3.html" target="_parent">Pg-3</a>
+        <a href="https://www.youtube.com/@jogandofoddaci" target="_new">Jogandofoddacci</a>
+    </nav>
+</body>
+</html>

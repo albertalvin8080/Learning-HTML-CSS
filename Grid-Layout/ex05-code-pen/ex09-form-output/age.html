@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age</title>
+    <style>
+        div {
+            margin: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <Legend>Age</Legend>
+            <div>
+                <label for="ibirth">Birth Year:</label><br>
+                <input type="number" name="birth" id="ibirth" min="1940" max="2023" oninput="calculateAge()">
+            </div>
+            <div>
+                <label for="out_age">Your Age:</label>
+                <output id="out_age"></output>
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        function calculateAge() {
+            let presentYear = new Date().getFullYear()
+            out_age.innerHTML = Number(presentYear) - Number(ibirth.value)
+        }
+    </script>
+</body>
+</html>

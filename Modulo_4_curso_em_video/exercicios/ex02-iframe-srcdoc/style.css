@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+iframe {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+}
+
+ul {
+    list-style-type: armenian;
+    line-height: 1.5;
+}

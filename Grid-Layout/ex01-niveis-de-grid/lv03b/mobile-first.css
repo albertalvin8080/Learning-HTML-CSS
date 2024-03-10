@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    display: grid;
+    background-color: gold;
+    grid-template-areas: 
+    'a a a'
+    'a a a'
+    'b b b'
+    'b b b'
+    'b b b'
+    'c c c'
+    ;
+    padding: 10px;
+    row-gap: 10px;
+    height: 100vh;
+}
+
+div {
+    background-color: blue;
+}
+
+#a {
+    grid-area: a;
+}
+
+#b {
+    grid-area: b;
+}
+
+#c {
+    grid-area: c;
+}

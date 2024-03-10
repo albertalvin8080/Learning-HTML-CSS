@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* margin: 10px; */
+    perspective: 500px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-rows: 100% 100%; */
+    height: 100vh;
+}
+
+#dv1 {
+    padding: 2px;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    /* grid-row: span 2; */
+
+    /* transform: translate(100%, 100%) scale(1.5) skewY(0deg) skewX(10deg); */
+    backface-visibility: visible;
+    /* transform: translate(100%, 100%); */
+    transform-origin: 100% 0%;
+}
+
+#dv1:hover {
+    cursor: pointer;
+}

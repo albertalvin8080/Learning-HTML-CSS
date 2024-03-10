@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+main {
+    width: 80vw;
+    height: 310px;
+}
+
+div#image {
+    float: left;
+    height: 100%;
+    width: 40%;
+}
+
+div#login {
+    float: right;
+    width: 60%;
+    height: 100%;
+}
+
+/* div#login > p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+} */

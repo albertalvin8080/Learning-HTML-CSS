@@ -1,0 +1,335 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    float: none;
+    overflow: visible;
+}
+
+@page {
+    size: A4;
+    margin: 3.7% 9.5%;
+}
+
+@page :blank {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+@page :left {
+    @top-left {
+        box-sizing: content-box;
+        content: string(h1); /* o Prince reconhece, o browser nao */
+        border-bottom: 1pt solid black;
+        margin-top: 15pt;
+    }
+    @bottom-left { /* o Prince aceita essa sintaxe */
+        content: counter(page);
+        border-top: 1pt solid black;
+        margin-bottom: 15pt;
+    }
+}
+
+@page :right {
+    @top-right {
+        content: string(h2); /* o Prince reconhece, o browser nao */
+        border-bottom: 1pt solid black;
+        margin-top: 15pt;
+    }
+    @bottom-right { /* o Prince aceita essa sintaxe */
+        content: counter(page);
+        border-top: 1pt solid black;
+        margin-bottom: 15pt;
+    }
+}
+
+@page :first {
+    margin-top: -70pt;
+    margin-bottom: -70pt;
+}
+
+@page:nth(3) { /* sintaxe do Prince */
+    margin-top: 0;
+    @bottom-right {
+        content: '';
+        border: 0;
+        margin-top: 0;
+    }
+    @bottom-center {
+        content: counter(page);
+        padding-bottom: 15pt;
+    }
+}
+
+body {
+    padding: 8pt 0;
+}
+
+section[data-type="titlepage"] {
+    break-after: always;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bolder;
+}
+
+section[data-type="titlepage"] h1 {
+    background-color: rgb(136, 136, 136);
+    padding: 15pt;
+    text-align: center;
+    width: 100%;
+    font-size: 2.2em;
+    border-radius: 10pt;
+    color: white;
+    margin: 355pt 0 130pt;
+    
+    string-set: h1 content();  /* o Prince reconhece, o browser nao */
+}
+
+p[data-type="author"] {
+    text-align: center;
+    margin-bottom: 255pt;
+}
+
+p[data-type="publisher"] {
+    text-align: center;
+    margin-bottom: 100pt;
+}
+
+
+/* ---------------- conteudo ---------------- */
+
+section[data-type="chapter"] {
+    counter-reset: counter1 15;
+    break-before: right;
+}
+
+section[data-type="chapter"] * {
+    margin: 15pt 0;
+}
+
+h2, h3, h4, h5 {
+    font-family: 'EB Garamond', serif;
+    font-style: normal;
+    font-weight: normal;
+    color: rgba(70, 70, 70, 0.922);
+}
+
+section[data-type="chapter"] > h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3.0em;
+    margin-bottom: 50pt;
+    margin-top: 50pt;
+
+    counter-reset: subcounter1;
+    string-set: h2 content(); /* o Prince reconhece, o browser nao */
+}
+
+section[data-type="chapter"] > h2::after {
+    content: counter(counter1);
+    counter-increment: counter1;
+    font-size: 1.8em;
+}
+
+
+section[data-type="chapter"] h3 {
+    font-size: 1.95em;
+    counter-reset: subcounter2;
+}
+
+section[data-type="chapter"] h3::before {
+    content: counter(counter1) '.' counter(subcounter1);
+    counter-increment: subcounter1;
+    margin-right: 20pt;
+}
+
+section[data-type="chapter"] p {
+    font-family: 'Cormorant Garamond', serif;
+    color: rgba(0, 0, 0, 0.904);
+    font-weight: bold;
+    text-align: justify;
+    line-height: 1.3;
+    text-indent: 25pt;
+    font-size: 0.98em;
+    orphans: 3;
+    widows: 2;
+}
+
+section[data-type="chapter"] h3 + p {
+    text-indent: 0;
+}
+
+
+section[data-type="chapter"] h4 {
+    font-weight: bold;
+}
+
+section[data-type="chapter"] h4::before {
+    content: counter(counter1)'.'counter(subcounter1)'.'counter(subcounter2);
+    counter-increment: subcounter2;
+    margin-right: 15pt;
+}
+
+section[data-type="chapter"] h4 + p {
+    text-indent: 0;
+}
+
+
+section[data-type="chapter"] div[data-type="example"] {
+    border: 1pt solid rgba(128, 128, 128, 0.824);
+    padding: 0 10pt;
+}
+
+div[data-type="example"] > * {
+    padding: 0;
+    margin: 6pt 0;
+}
+
+div[data-type="example"] h5 {
+    border-bottom: 1pt solid black;
+    font-size: 1.55em;
+    font-weight: bold;
+    color: gray;
+    margin-bottom: 2pt;
+}
+
+
+section[data-type="chapter"] figure {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 10pt auto;
+    width: 340pt;
+
+    counter-reset: figure-counter;
+}
+
+section[data-type="chapter"] figure > * {
+    margin: 0;
+}
+
+figure figcaption::before {
+    content: 'Figura ' counter(counter1)'.'counter(figure-counter);
+    counter-increment: figure-counter;
+    color: gray;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 20pt;
+    font-family: 'Balthazar', serif;
+}
+
+figure img {
+    margin-top: 15pt !important;
+}
+
+
+table {
+    width: 450pt;
+    font-family: 'EB Garamond', serif;
+    margin: 40pt auto !important;
+    border-spacing: 0;
+    border-collapse: collapse;
+    /* border: 1px solid black; */
+    counter-reset: table-counter;
+    box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.8);
+    caption-side: top;
+}
+
+table * {
+    border: 0;
+    margin: 0;
+}
+
+table > caption {
+    text-align: left;
+    height: fit-content;
+    margin: 0 !important;
+}
+
+table caption::before {
+    content: 'Table ' counter(counter1)'.'counter(table-counter);
+    counter-increment: table-counter;
+    color: gray;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 20pt;
+    font-family: 'Balthazar', serif;
+}
+
+table td, table th {
+    padding: 15pt 12pt;
+    text-align: left;
+    font-weight: light;
+}
+
+table thead {
+    font-size: 1em;
+}
+
+table thead {
+    text-shadow: 0px 0px 1px rgb(0, 0, 0);
+    color: white;
+    background-color: gray;
+}
+
+table tbody {
+    font-size: 0.9em;
+}
+
+table tbody tr {
+    border-bottom: 1px solid gray;
+    font-weight: normal;
+    color: gray;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgba(211, 211, 211, 0.4);
+}
+
+table tbody tr th {
+    font-size: 1em;
+    color: black;
+    text-align: center;
+}
+
+table tfoot tr td {
+    text-align: center;
+    padding: 0;
+}
+
+section[data-type="glossary"] {
+    border-top: 2px solid black;
+}
+
+section[data-type="glossary"] * {
+    margin: 0;
+}
+
+section[data-type="glossary"] h2 {
+    margin: 15pt 0;
+}
+
+dl[data-type="glossary"] {
+    line-height: 1.3;
+    font-family: 'EB Garamond', serif;
+}
+
+dl[data-type="glossary"] dt {
+    margin-right: 15pt;
+    float: left;
+    clear: left;
+    font-weight: bold;
+}
+
+dl[data-type="glossary"] dd {
+    display: inline;
+    color: rgba(0, 0, 0, 0.90);
+}
+
+

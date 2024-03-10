@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+main > section {
+    height: 350px;
+    width: 1000px;
+    /* border: 5px solid black; */
+}
+
+div#image {
+    vertical-align: middle;
+    width: 480px;
+    height: 350px;
+    border-radius: 0;
+    display: inline-block;
+    border: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translate(108.5%);
+}
+
+div#login {
+    transform: translate(-92%);
+    width: 500px;
+    height: 330px;
+    border-radius: 0;
+    /* margin-left: -300px; */
+    /* transform: rotate(-180deg); */
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+div#login > h1 {
+    font-size: 2em;
+}
+
+div#login > p {
+    font-size: 1.2em;
+}
+
+div#form-email, div#form-password {
+    width: 495px;
+    height: 50px;
+    /* margin-top: 10px; */
+}
+
+div#login input {
+    border-radius: 10px;
+    height: 50px;
+    width: 435px;
+}
+
+div#login label {
+    /* padding-left: 7px; */
+    padding-right: 0px;
+    font-size: 2.7em;
+}
+
+div#form-submit > input {
+    width: 490px;
+    color: white;
+    height: 35px;
+    font-size: 15px;
+    font-size: 1em;
+    font-size: 1.2em;
+}
+
+/* div#login > p > a#forgot-password {
+    width: 473px;
+} */

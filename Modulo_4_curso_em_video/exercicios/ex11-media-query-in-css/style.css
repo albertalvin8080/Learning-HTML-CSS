@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@media all {
+    body {
+        background-color: black;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        background-color: aqua;
+    }
+    h1 {
+        text-align: center;   
+    }
+}
+
+@media screen and (orientation: portrait) {
+    body {
+        background-color: brown;
+    }
+
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range</title>
+    <style>
+        input, output {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <form action="cadastro.php" method="post">
+        <fieldset>
+            <legend>Range Change</legend>
+            <div>
+                <label for="ihappinnes">Happinnes Scale</label><br>
+                <input type="range" name="happinnes" id="ihappinnes" min="1" max="100" oninput="changeHappinnes()">
+                <output id="out_happinnes">50</output>
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        function changeHappinnes() {
+            out_happinnes.innerHTML = Number(ihappinnes.value)
+        }
+    </script>
+</body>
+</html>

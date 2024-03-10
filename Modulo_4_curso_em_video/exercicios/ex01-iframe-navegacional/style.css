@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+iframe#if-navigator {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 300px;
+}
+

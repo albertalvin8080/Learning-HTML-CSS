@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    color: white;
+    text-align: center;
+    text-shadow: 0px 0px 3px black;
+    height: 100vh;
+    display: grid;
+}
+
+.title {
+    background-color: aqua;
+}
+
+.meta {
+    background-color: lightgray;
+}
+
+.copy:nth-child(3) {
+    background-color: blue;
+}
+
+.copy:nth-child(4) {
+    background-color: rgb(206, 141, 141);
+}
+
+.media {
+    background-color: yellow;
+}
+
+aside {
+    background-color: rgb(239, 90, 37);
+}

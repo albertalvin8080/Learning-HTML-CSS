@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos/mobile-first.css">
+    <link rel="stylesheet" href="estilos/media-queries.css" media="screen and (min-width: 768px)">
+</head>
+<body onresize="forceDisplayBlock()">
+    <header>
+        <h1>Minha Pagina</h1>
+        <menu>
+            <span id="menu-icon" class="material-symbols-outlined" onclick="changeMenu()">menu</span>
+            <ul id="icons">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Novo</a></li>
+                <li><a href="#">Artigos</a></li>
+                <li><a href="#">Sobre nós</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Titulo do Artigo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse adipisci magni autem laudantium odio repellendus aliquam, obcaecati molestiae. Cum rem autem aut voluptatum quos necessitatibus id praesentium vitae facilis totam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis culpa earum fugiat non blanditiis impedit, ducimus rem consectetur, mollitia nam eligendi, sequi delectus temporibus cumque sed vero! Veniam, porro voluptates! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat omnis commodi deleniti consequatur nam repellendus inventore temporibus modi ratione doloribus nesciunt perspiciatis autem amet hic architecto, quo, veritatis veniam quod.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse adipisci magni autem laudantium odio repellendus aliquam, obcaecati molestiae. Cum rem autem aut voluptatum quos necessitatibus id praesentium vitae facilis totam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis culpa earum fugiat non blanditiis impedit, ducimus rem consectetur, mollitia nam eligendi, sequi delectus temporibus cumque sed vero! Veniam, porro voluptates! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat omnis commodi deleniti consequatur nam repellendus inventore temporibus modi ratione doloribus nesciunt perspiciatis autem amet hic architecto, quo, veritatis veniam quod.</p>
+        </article>
+    </main>
+
+    <script>
+        function forceDisplayBlock() {
+            if(window.innerWidth >= 768) {
+                icons.style.display = 'block'
+            } else {
+                icons.style.display = 'none'
+            }
+        }
+
+        function changeMenu() {
+            if(icons.style.display == 'none') {
+                icons.style.display = 'block'
+            } else {
+                icons.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>

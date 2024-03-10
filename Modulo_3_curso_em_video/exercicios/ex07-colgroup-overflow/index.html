@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colgroups e overflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <table>
+            <colgroup>
+                <col class="c-produto">
+                <col class="c-preco">
+                <col class="c-quantidade" span="12">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2">Produto</th>
+                    <th rowspan="2">Preco (R$)</th>
+                    <th colspan="12">Quantidade Vendida</th>
+                </tr>
+                <tr>
+                    <th>Jan</th>
+                    <th>Fev</th>
+                    <th>Mar</th>
+                    <th>Abr</th>
+                    <th>Mai</th>
+                    <th>Jun</th>
+                    <th>Jul</th>
+                    <th>Ago</th>
+                    <th>Set</th>
+                    <th>Out</th>
+                    <th>Nov</th>
+                    <th>Dez</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+                <tr>
+                    <td>RTX 7060</td>
+                    <td>11 000 00</td>
+                    <td>04</td>
+                    <td>13</td>
+                    <td>56</td>
+                    <td>45</td>
+                    <td>03</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td>15</td>
+                    <td>00</td>
+                    <td>80</td>
+                    <td>00</td>
+                    <td>00</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+    </div>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi voluptatum. Ipsum voluptates, libero, delectus, fuga veniam iste quae quibusdam amet fugit soluta natus exercitationem quisquam magnam nostrum cumque sit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. At nemo, explicabo suscipit ullam repellat ea repellendus! Ipsa similique aspernatur dolore harum maxime odit tenetur autem blanditiis, cumque fugit voluptatem perspiciatis?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi voluptatum. Ipsum voluptates, libero, delectus, fuga veniam iste quae quibusdam amet fugit soluta natus exercitationem quisquam magnam nostrum cumque sit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. At nemo, explicabo suscipit ullam repellat ea repellendus! Ipsa similique aspernatur dolore harum maxime odit tenetur autem blanditiis, cumque fugit voluptatem perspiciatis?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi voluptatum. Ipsum voluptates, libero, delectus, fuga veniam iste quae quibusdam amet fugit soluta natus exercitationem quisquam magnam nostrum cumque sit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. At nemo, explicabo suscipit ullam repellat ea repellendus! Ipsa similique aspernatur dolore harum maxime odit tenetur autem blanditiis, cumque fugit voluptatem perspiciatis?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi voluptatum. Ipsum voluptates, libero, delectus, fuga veniam iste quae quibusdam amet fugit soluta natus exercitationem quisquam magnam nostrum cumque sit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. At nemo, explicabo suscipit ullam repellat ea repellendus! Ipsa similique aspernatur dolore harum maxime odit tenetur autem blanditiis, cumque fugit voluptatem perspiciatis?</p>
+</body>
+</html>

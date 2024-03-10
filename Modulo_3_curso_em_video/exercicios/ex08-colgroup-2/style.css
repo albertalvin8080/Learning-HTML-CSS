@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 700px;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: black;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.container {
+    overflow-x: auto;
+}
+
+.c-aluno {
+    background-color: yellow;
+}
+.c-materia {
+    background-color: rebeccapurple;
+}
+.c-notas {
+    background-color: cadetblue;
+}
+
+.c-media {
+    background-color: aqua;
+}

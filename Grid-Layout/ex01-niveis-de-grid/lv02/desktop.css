@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+body {
+    background-color: gold;
+    height: 100vh;
+    display: grid;
+    padding: 10px;
+    align-content: stretch;
+    row-gap: 0px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+}
+
+#left, #right {
+    background-color: blue;
+    border: 1px solid black;
+    height: auto;
+}
+
+#left {
+    grid-column: 1/5;
+}
+
+#right {
+    grid-column: 5/13;
+}

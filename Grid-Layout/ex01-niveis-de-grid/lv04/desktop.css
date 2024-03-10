@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    background-color: gold;
+    padding: 10px;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+div {
+    background-color: blue;
+}
+
+#a {
+    grid-column: 1/13;
+    grid-row: 1/4;
+}
+
+#b {
+    grid-column: 1/9;
+    grid-row: 4/9;
+}
+
+#c {
+    grid-column: 1/5;
+    grid-row: 9/13;
+}
+
+#d {
+    grid-column: 5/9;
+    grid-row: 9/13;
+}
+
+#e {
+    grid-column: 9/13;
+    grid-row: 4/13;
+}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+    height: 100vh;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+    gap: 10px;
+}
+
+div {
+    background-color: darkcyan;
+}
+
+#a {grid-column: 1/13; grid-row: 1/3;}
+#b {grid-column: 3/11;}
+#c {grid-column: 1/3;grid-row: 3/13;}
+#d {grid-column: 3/11;grid-row: 4/13;}
+#e {grid-column: 11/13;grid-row: 3/13;}
+#f {grid-column: 1/13;grid-row: 13/15;}

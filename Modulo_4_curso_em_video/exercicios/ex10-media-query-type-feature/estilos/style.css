@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/* General style */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #233EFF;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+/* main {
+    margin: auto;
+    max-width: 500px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+} */
+
+h1 {
+    margin: 0px 10px 10px 10px;
+}
+
+p {
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+div {
+    margin: 10px 5px;
+}

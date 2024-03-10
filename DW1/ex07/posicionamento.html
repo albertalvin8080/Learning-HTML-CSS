@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CSS: Posicionamento</title>
+        <style>
+            div > div {
+                width: 300px;
+                height: 300px;
+                float: left;
+            }
+            #outer {
+                width: 600px;
+                height: 600px;
+                border: 2px solid black;
+                margin: 0 auto;
+                position: relative;
+            }
+            #rect1 {
+                position: relative;
+                top: 50px;
+                right: 50px;
+                background-color: red;
+            }
+            #rect2 {
+                background-color: blue;
+                position: sticky;
+                top: 0; /* se torna pegajoso à 0 do topo */
+                z-index: 1;
+            }
+            #rect3 {
+                background-color: green;
+                position: relative;
+                /* top: 50%; */
+                left: 50%;
+                /* z-index: 1; */
+            }
+            #rect4 {
+                position: absolute;
+                top: 100px;
+                right: 100px;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="outer">
+            <div id="rect1"></div>
+            <div id="rect2"></div>
+            <div id="rect3"></div>
+            <div id="rect4"></div>
+        </div>
+    </body>
+</html>

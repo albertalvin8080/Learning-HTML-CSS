@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sincronizacao Vertical</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        main {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+        }
+
+        #container {
+            background-color: purple;
+            position: relative;
+            /* height: 97vh; */
+            height: 600px;
+            /* padding-bottom: 56.5%; */
+        }
+
+        #content {
+            background-color: yellow;
+            position: absolute;
+            width: 300px;
+            height: 200px;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="container">
+            <article id="content">
+            </article>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: Verajja;
+    src: url('fontes/Verajja Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sem-serifa: Verajja, sans-serif;
+    --sem-serifa02: Arial, Helvetica, sans-serif;
+    --com-serifa: 'Times New Roman', Times, serif;
+    --cor01: #3d4f5d;
+    --cor02: lightblue;
+    --cor03: #aaa;
+    --cor04: #999;
+    --cor05: #5aba59;
+    --cor06: #4d85d1;
+    --cor07: #df2d4f;
+    --cor08: #444;
+}
+
+
+
+div.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: 'cabecalho conteudo';
+}
+
+header#cabecalho {
+    grid-area: cabecalho;
+    font-family: var(--sem-serifa02);
+    background-color: var(--cor01);
+    padding: 30px;
+
+    display: grid;
+    align-content: center;
+    justify-items: right;
+    margin-top: -100px;
+    text-align: right;
+}
+
+#cabecalho h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#cabecalho p {
+    font-size: 1.4em;
+    color: var(--cor02);
+    opacity: 0.5;
+    font-weight: lighter;
+}
+
+#cabecalho button {
+    margin-top: 12px;
+    border: 1px solid var(--cor02);
+    background-color: transparent;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#cabecalho button:hover {
+    cursor: pointer;
+}
+
+
+
+main#conteudo {
+    font-family: var(--sem-serifa02);
+    grid-area: conteudo;
+    padding: 40px;
+}
+
+.mensagem p.descritor {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 0.5px solid var(--cor03);
+    color: var(--cor03);
+    padding-left: 5px;
+    font-size: 80%;
+    margin-bottom: 20px;
+}
+
+.mensagem p.especial {
+    text-transform: none;
+}
+
+
+
+.mensagem .titulo-foto {
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.mensagem h2 {
+    font-family: var(--sem-serifa);
+}
+
+.mensagem img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+}
+
+
+
+.mensagem h3 {
+    font-weight: normal;
+    font-size: 90%; /* 0.9em */
+    color: var(--cor04);
+}
+
+.mensagem a {
+    text-decoration: none;
+}
+
+.mensagem a.autor {
+    color: blue;
+    font-weight: bold;
+}
+
+.mensagem a.assunto {
+    padding: 2.5px 10px;
+    color: white;
+    font-size: 90%;
+    text-transform: uppercase;
+}
+
+.mensagem a#html {
+    background-color: var(--cor05);
+}
+
+.mensagem a#css {
+    background-color: var(--cor07);
+}
+
+.mensagem a#js {
+    background-color: var(--cor06);
+    text-transform: none;
+}
+
+
+
+.mensagem p.mensagem-corpo {
+    font-family: var(--com-serifa);
+    line-height: 1.8em;
+    margin: 14px 0;
+}

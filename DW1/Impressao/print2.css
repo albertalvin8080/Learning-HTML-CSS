@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --lora: 'Lora', serif;
+    --balthazar: 'Balthazar', serif;
+    --EBGaramond: 'EB Garamond', serif;
+    --RobotoSlab: 'Roboto Slab', serif;
+    --CormorantGaramond: 'Cormorant Garamond', serif;
+}
+
+@page {
+    margin: 3% initial;
+}
+
+@page:first {
+    margin: 6.9% 28.4%;
+}
+
+@page:first {
+    @bottom-right {
+        content: '';
+        border: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        background-color: white;
+    }
+}
+
+@page:first {
+    @bottom-left {
+        content: '';
+        border: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        background-color: white;
+    }
+}
+
+@page:right {
+    @bottom-right {
+        content: counter(page) ' de 5';
+        margin-top: 25pt;
+        padding-bottom: 15pt;
+
+        background-color: black;
+        color: white;
+        width: 32pt;
+        text-align: center;
+    }
+}
+
+@page:right {
+    @bottom-left {
+        content: '';
+        border-top: 0.75pt solid black;
+        margin-top: 24.5pt;
+    }
+}
+
+@page:left {
+    @bottom-left {
+        content: counter(page) ' de 5';
+        margin-top: 25pt;
+        padding-bottom: 15pt;
+
+        background-color: black;
+        color: white;
+        width: 32pt;
+        text-align: center;
+    }
+}
+
+@page:left {
+    @bottom-right {
+        content: '';
+        border-top: 0.75pt solid black;
+        margin-top: 24.5pt;
+    }
+}
+
+body {
+}
+
+section[data-type="titlepage"] {
+    font-family: var(--balthazar);
+    height: 99.5vh;
+
+    display: flex;
+    flex-direction: column;
+    
+    border-left: 2pt solid black;
+    break-after: always;
+    counter-reset: section1 1;
+}
+
+section[data-type="titlepage"] header {
+    display: flex;
+    flex-direction: column;
+}
+
+section[data-type="titlepage"] header h1 {
+    margin-bottom: 114pt;
+    margin-top: 112pt;
+    margin-left: 16pt;
+    font-style: italic;
+    font-size: 3.0em;
+}
+
+header p[data-type="author"] {
+    font-size: 1.35em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 357pt;
+    margin-left: 16pt;
+}
+
+section p[data-type="publisher"] {
+    margin-left: 16pt;
+}
+
+
+section[data-type="chapter"] {
+    font-family: var(--balthazar);
+}
+
+section[data-type="chapter"] > h2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin: 20pt 0;
+    text-align: right;
+    font-weight: bold;
+    font-size: 3.5em;
+    position: relative;
+    z-index: 1;
+}
+
+section[data-type="chapter"] > h2::before {
+    content: '1';
+    font-size: 3.5em;
+    color: rgb(210, 210, 210);
+    position: relative;
+    left: 35.5%;
+    bottom: 8pt;
+    z-index: -1;
+}
+
+section[data-type="chapter"] p {
+    text-align: justify;
+    font-size: 1em;
+    text-indent: 28pt;
+    margin: 15pt 0;
+}
+
+section[data-type="sect1"] h3 {
+    background-color: black;
+    color: white;
+    padding: 2pt;
+}
+
+
+section[data-type="sect2"] div[data-type="example"] {
+    page-break-before: always;
+}
+
+div[data-type="example"] {
+    border-bottom: 1pt solid black;
+    margin-bottom: 15pt;
+}
+
+div[data-type="example"] p:last-child {
+    margin-bottom: 2pt;
+}
+
+div[data-type="example"] h5 {
+    background-color: black;
+    color: white;
+    padding: 5pt;
+}
+
+figure {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    counter-reset: figure1 1;
+}
+
+figure figcaption {
+    width: 270pt;
+    text-align: justify;
+}
+
+figure figcaption::before {
+    content: 'Figure ' counter(section1) '.' counter(figure1);
+    font-weight: bolder;
+    margin-right: 10pt;
+}
+
+figure img {
+    display: block;
+    margin: 0 auto !important;
+}
+
+
+table {
+    margin: 35pt auto !important;
+    width: 360pt;
+    counter-reset: table1 1;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table caption::before {
+    content: 'Table ' counter(section1) '.' counter(table1);
+    margin-right: 12pt;
+    font-weight: bolder;
+}
+
+table thead tr {
+    border-top: 0.75pt solid black;
+    border-bottom: 0.75pt solid black;
+}
+
+table tbody th, table tbody td {
+    padding: 2pt 0;
+}
+
+table tbody tr:last-child {
+    border-bottom: 0.75pt solid black;
+}
+
+table tfoot tr {
+    text-align: center;
+}
+
+
+section[data-type="glossary"] h2 {
+    margin-bottom: 15pt;
+}
+
+dl[data-type="glossary"] dd {
+    margin-bottom: 15pt;
+}

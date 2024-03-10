@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <style>
+        div {
+            margin: 10px 5px;
+        }
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testing Output</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Sum</legend>
+            <div>
+                <label for="in1">First Number</label>
+                <input type="number" name="n1" id="in1" oninput="sum()">
+                <br>
+                <label for="in2">Second number:</label>
+                <input type="number" name="n2" id="in2" oninput="sum()">
+                <br>
+                
+                <label for="outsum">Sum:</label>
+                <output id="outsum">0</output>
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        function sum() {
+            outsum.innerHTML = Number(in1.value) + Number(in2.value)
+        }
+    </script>
+</body>
+</html>

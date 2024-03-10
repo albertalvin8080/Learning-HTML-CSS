@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            margin: 2px 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post" autocomplete="on">
+        <ul>
+            <li><h1>Formulário</h1></li>
+            <li>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" placeholder="insira seu nome">
+            </li>
+            <li>
+                Sexo:
+                <input type="radio" name="sexo" id="m"><label for="m">Masculino</label>
+                <input type="radio" name="sexo" id="f"><label for="f">Feminino</label>
+            </li>
+            <li>
+                <label for="ipais">País:</label>
+                <select name="pais" id="ipais">
+                    <option value="br">Brasil</option>
+                    <option value="p">Peru</option>
+                </select>
+            </li>
+            <li>
+                <label for="ifoto">Foto:</label>
+                <input type="file" name="foto" id="ifoto">
+            </li>
+            <li><input type="submit" value="Enviar Formulário"></li>
+        </ul>
+    </form>
+</body>
+</html>

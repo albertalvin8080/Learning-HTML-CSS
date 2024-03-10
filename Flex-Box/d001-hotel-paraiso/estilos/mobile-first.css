@@ -1,0 +1,327 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    flex-direction: column;
+}
+
+header .menu {
+    margin-top: 10px;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+}
+
+header .menu div {
+    /* border: 1px solid black; */
+    display: flex;
+}
+
+.menu li {
+    font-size: 0.899em;
+    width: 80px;
+    padding: 10px;
+    /* border: 1px solid black; */
+    background-color: black;
+    text-align: center;
+    border-radius: 10px;
+    color: gold;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+/* BANNER */
+
+.banner {
+    background-image: url(../imagens/image-porto-seguro-hotel-paraiso-do-morro-1.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    max-height: 900px;
+    height: 100vw;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.banner h1 {
+    font-size: 6.5vw;
+    text-shadow: 0px 0px 5px black;
+    margin-bottom: 6vw;
+}
+
+.banner h2 {
+    font-size: 4.5vw;
+    margin-bottom: 6vw;
+}
+
+.banner a {
+    color: black;
+    opacity: 0.9;
+    background-color: white;
+    border-radius: 5px;
+    padding: 3vw;
+    font-size: 3vw;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.banner a:hover {
+    opacity: 1;
+}
+
+
+/* conheça-o-hp */
+
+.conheça-o-hp {
+    margin-top: 15vw;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+.conheça-o-hp h1 {
+    font-size: 6.5vw;
+    margin-bottom: 10vw;
+}
+
+.conheça-o-hp p {
+    font-size: 3.5vw;
+    margin-bottom: 10vw;
+    padding: 0px 40px;
+}
+
+.conheça-o-hp hr {
+    width: 40vw;
+    /* border: 0; */
+    background-color: black;
+    margin-bottom: 7vw;
+    border: 0;
+    height: 2px;
+}
+
+
+/* GRID */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /* border: 1px solid black; */
+    padding: 10px;
+    background-color: white;
+}
+
+.grid .small {
+    background-clip: content-box;
+    padding: 3vw;
+    height: 40vw;
+    flex-basis: 40%;
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 7vw;
+}
+
+.grid .large {
+    background-clip: content-box;
+    padding: 3vw;
+    height: 40vw;
+    flex-basis: 60%;
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 7vw;
+}
+
+
+/* INFO */
+
+.info {
+    width: 100%;
+    background-color: #191A02;
+    color: white;
+    margin-top: 20vw;
+    padding: 10vw 4vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.info h1 {
+    text-align: center;
+    font-size: 6.5vw;
+    margin-bottom: 3vw;
+}
+
+.info p {
+    text-align: center;
+    font-size: 3.5vw;
+    margin-bottom: 15vw;
+}
+
+.info ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    gap: 8vw;
+}
+
+.info ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info ul li span {
+    font-size: 7vw;
+    color: gold;
+}
+
+.info ul li h2 {
+    font-size: 5vw;
+    color: gold;
+    margin-bottom: 3vw;
+}
+
+.info ul li p {
+    margin-bottom: 0;
+}
+
+
+/* NEWSLETTER */
+
+.newsletter {
+    padding: 15vw 5vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.newsletter h1 {
+    font-size: 6.5vw;
+    margin-bottom: 7vw;
+}
+
+.newsletter p {
+    margin-bottom: 7vw;
+    font-size: 3.5vw;
+}
+
+.newsletter hr {
+    width: 40vw;
+    margin-bottom: 7vw;
+    background-color: black;
+    height: 2px;
+    border: 0;
+}
+
+.newsletter form {
+    /* border: 1px solid black; */
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+}
+
+.newsletter form input {
+    flex-basis: 100%;
+    padding: 3vw 2vw;
+    flex-grow: 1;
+    height: 3vw;
+    font-size: 3vw;
+    /* margin-right: 1vw; */
+}
+
+.newsletter form input:focus-within {
+    background-color: gold;
+    /* color: black; */
+}
+
+.newsletter form button {
+    border: none;
+    padding: 2.5vw;
+    background-color: black;
+    border-radius: 1vw;
+    color: white;
+    opacity: 0.85;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 3vw;
+}
+
+.newsletter form button:hover {
+    opacity: 1;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 10vw;
+    background-color: #191A02;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .social-icons {
+    list-style-type: none;
+    color: gold;
+    display: flex;
+    margin-bottom: 5vw;
+    gap: 3vw;
+}
+
+footer i {
+    font-size: 5vw;
+}
+
+footer p {
+    font-size: 3vw;
+    color: white;
+}

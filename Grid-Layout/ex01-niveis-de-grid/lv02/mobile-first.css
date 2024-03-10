@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gold;
+    height: 100vh;
+    display: grid;
+    padding: 10px;
+    /* align-content: center; */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
+}
+
+#left, #right {
+    background-color: blue;
+    border: 1px solid black;
+    /* height: 200px; */
+}

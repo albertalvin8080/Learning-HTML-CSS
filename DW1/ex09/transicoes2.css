@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@keyframes questao1 {
+    0%{
+        background-color: red;
+    }
+    100%{
+        background-color: blue;
+    }
+}
+
+/* questao1 */
+/* div {
+    animation-name: questao1;
+    animation-duration: 2s;
+} */
+
+@keyframes questao2 {
+    0%{background-color: red;left: 0px;top: 0px;}
+    25%{background-color: blue;left: 0px;top: 200px;}
+    50%{background-color: green;left: 200px;top: 200px;}
+    75%{background-color: yellow;left: 200px;top: 0px;}
+    100%{background-color: red;left: 0px;top: 0px;}
+}
+
+/* questao2 */
+div {
+    animation-name: questao2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+@keyframes teste1 {
+    0% {top: 0%;left: 0%;}
+    25% {top: 0%;left: 500px;}
+    50% {top: 500px;left: 500px;}
+    75% {top: 500px;left: 0%;}
+    100% {top: 0%;left: 0%;}
+}
+
+/* teste1 */
+/* div {
+    animation-name: teste1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+} */
+
+div {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    /* margin: auto; */
+}

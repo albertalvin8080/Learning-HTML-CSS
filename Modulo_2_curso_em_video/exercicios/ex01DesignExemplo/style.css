@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+* { 
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+body{
+    /* background-color: #ECF0F1; */
+    background-image: linear-gradient(to right, #ECF0F1, #d1d5d6);
+}
+
+main{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(198, 198, 198);
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+}
+
+p{
+    text-align: justify;
+}
+
+h1{
+    text-align: center;
+    color: #2C3E50;
+}
+
+h2{
+    color: #3498DB;
+}
+
+/* Color Theme Swatches in Hex
+.Flat-UI-1-hex { color: #2C3E50; }
+.Flat-UI-2-hex { color: #E74C3C; }
+.Flat-UI-3-hex { color: #ECF0F1; }
+.Flat-UI-4-hex { color: #3498DB; }
+.Flat-UI-5-hex { color: #2980B9; }
+
+Color Theme Swatches in RGBA
+.Flat-UI-1-rgba { color: rgba(43, 61, 79, 1); }
+.Flat-UI-2-rgba { color: rgba(230, 75, 59, 1); }
+.Flat-UI-3-rgba { color: rgba(235, 239, 240, 1); }
+.Flat-UI-4-rgba { color: rgba(52, 151, 219, 1); }
+.Flat-UI-5-rgba { color: rgba(40, 128, 184, 1); }
+
+Color Theme Swatches in HSLA
+.Flat-UI-1-hsla { color: hsla(210, 29, 24, 1); }
+.Flat-UI-2-hsla { color: hsla(5, 78, 57, 1); }
+.Flat-UI-3-hsla { color: hsla(192, 15, 93, 1); }
+.Flat-UI-4-hsla { color: hsla(204, 69, 53, 1); }
+.Flat-UI-5-hsla { color: hsla(203, 63, 44, 1); } */

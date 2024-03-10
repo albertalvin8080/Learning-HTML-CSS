@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dv1" onclick="rotateY()">
+        PHILOMELA
+    </div>
+    <script>
+        let dv1, ny=0, rotationYId;
+
+        function rotateY() {
+            dv1 = document.getElementById('dv1');
+            clearInterval(rotationYId);
+            rotationYId = setInterval(startRotationY, 1);
+        }
+
+        function startRotationY() {
+                ny+=1;
+                dv1.style.transform = 'rotateY('+ ny + 'deg)';
+                if(ny == 180 || ny == 360) {
+                    clearInterval(rotationYId);
+                    if(ny == 360) ny = 0;
+                }
+            }
+    </script>
+</body>
+</html>

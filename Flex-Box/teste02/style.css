@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: lightgray;
+    width: 100vw;
+    height: 500px;
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    /* flex-wrap: wrap; */
+}
+
+/* todos os elementos comecam com order:0 */
+.item-1 {
+    order:3;
+    /* flex-grow: 1; */
+}
+
+.item-2 {
+    order: 4;
+    /* flex-basis: 100%; */
+}
+
+.item-3 {
+    order: 1;
+    /* flex-basis: 100%; */
+}
+
+.item-4 {
+    order: 2;
+    /* flex-basis: 100%; */
+}
+
+.item {
+    padding: 20px;
+    border: 1px solid black;
+}

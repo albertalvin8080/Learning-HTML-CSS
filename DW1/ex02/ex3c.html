@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #select {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* justify-content: center; */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post" autocomplete="on">
+        <div id="select">
+            <label for="itipo">Tipo:</label>
+            <select name="tipo" id="itipo" multiple>
+                <option value="aluno">Aluno</option>
+                <option value="prof">Professor</option>
+                <option value="tadm">Técnico Admnistrativo</option>
+                <option value="terceirizado">Terceirizado</option>
+            </select>
+        </div>
+        <div>
+            <button type="button">Botão que não é de submissão</button>
+        </div>
+    </form>
+</body>
+</html>

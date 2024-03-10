@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframes</title>
+</head>
+<body>
+    <h1>Testing secure iframes</h1>
+
+    <iframe src="form.html" frameborder="1" referrerpolicy="no-referrer" sandbox="allow-same-origin allow-forms">
+        <p>Your browser does not support iframes</p>
+    </iframe>
+
+    <iframe src="form2.html" frameborder="1" referrerpolicy="no-referrer" sandbox="sandbox">
+        <p>Your browser does not support iframes</p>
+    </iframe>
+</body>
+</html>

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    height: auto;
+    background: #ccc;
+    padding: 20px;
+}
+
+#navigation li a {
+    /* display: block; */
+    float: none;
+    /* padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+    border-right: 1px solid #fff; */
+}
+
+#content {
+    /* clear: left; */
+    /* float: left; */
+    width: 90%;
+    /* padding: 20px 0; */
+    /* margin: 0 0 0 4%; */
+    /* display: inline; */
+}
+
+#content img {
+    width: 100%;
+}
+
+#content-container {
+    /* necessario para o position: sticky; funcionar */
+    float: none;
+    /* width: 100%;
+    background: #FFF; */
+}
+
+#aside {
+    display: none;
+}
+
+#footer {
+    clear: left;
+    background: #ccc;
+    text-align: center;
+}

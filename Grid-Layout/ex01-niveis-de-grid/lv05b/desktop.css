@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: lightgray;
+    padding: 10px;
+    gap: 10px;
+    display: grid;
+    grid-template-areas: 
+    'a a a  a a a  a a a  a a a'
+    'c c b  b b b  b b b  b e e'
+    'c c d  d d d  d d d  d e e'
+    'c c d  d d d  d d d  d e e'
+    'c c d  d d d  d d d  d e e'
+    'c c d  d d d  d d d  d e e'
+    'c c d  d d d  d d d  d e e'
+    'c c d  d d d  d d d  d e e'
+    'c c d  d d d  d d d  d e e'
+    'c c d  d d d  d d d  d e e'
+    'c c d  d d d  d d d  d e e'
+    'f f f  f f f  f f f  f f f'
+    ;
+}
+
+div {
+    background-color: darkblue;
+    color: white;
+}
+
+#a {grid-area: a;}
+#b {grid-area: b;}
+#c {grid-area: c;}
+#d {grid-area: d;}
+#e {grid-area: e;}
+#f {grid-area: f;}

@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+*, *::after, *::before {
+    margin: 0;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --lora: 'Lora', serif;
+    --balthazar: 'Balthazar', serif;
+    --EBGaramond: 'EB Garamond', serif;
+    --RobotoSlab: 'Roboto Slab', serif;
+    --CormorantGaramond: 'Cormorant Garamond', serif;
+    --width-items: 450pt;
+}
+
+@page {
+    margin: 7% 9.5%;
+}
+
+@page:first {
+    margin-top: 11.2%;
+    margin-left: 39.8%;
+    margin-bottom: 0;
+}
+
+@page:left {
+    @bottom-center {
+        content: 'Consectetur';
+        border-top: 1pt solid black;
+        width: 100pt;
+        margin-top: 22pt;
+        padding-bottom: 17pt;
+    }
+}
+
+@page:right {
+    @bottom-center {
+        content: 'Porttitor Ipsum';
+        border-top: 1pt solid black;
+        width: 100pt;
+        margin-top: 22pt;
+        padding-bottom: 17pt;
+    }
+}
+
+section[data-type="titlepage"] {
+    font-family: var(--lora);
+    height: 90vh;
+    break-after: always;
+    width: 175pt;
+}
+
+section[data-type="titlepage"] header h1 {
+    font-style: italic;
+    font-size: 3em;
+}
+
+section[data-type="titlepage"] header p {
+    text-align: right;
+    margin-right: 5pt;
+    margin-top: 48pt;
+    font-size: 1.35em;
+}
+
+section p[data-type="publisher"] {
+    text-align: right;
+    margin-right: 5pt;
+    margin-top: 345pt;
+    font-size: 1em;
+}
+
+
+section[data-type="chapter"] {
+    counter-reset: section1;
+}
+
+section[data-type="chapter"] > * {
+    font-family: var(--lora);
+    float: right;
+}
+
+section[data-type="chapter"] > * { /* repetição prposital para testes */
+    width: var(--width-items);
+}
+
+section[data-type="chapter"] > h2 {
+    margin-top: -25pt;
+    margin-bottom: 15pt;
+    font-size: 2.25em;
+    border-bottom: 1pt solid black;
+    text-align: right;
+    height: 90pt;
+    width: 450pt;
+}
+
+section[data-type="chapter"] > h2::after {
+    content: '1';
+    font-size: 2.65em;
+    color: rgb(171, 171, 171);
+    margin-left: 50pt;
+}
+
+section[data-type="chapter"] p {
+    text-align: justify;
+    text-indent: 29pt;
+}
+
+
+section[data-type="chapter"] h3, section[data-type="chapter"] h4, section[data-type="chapter"] h5 {
+    margin: 25pt 0;
+    position: relative;
+}
+
+section[data-type="chapter"] h3::before {
+    content: counter(section1)'.';
+    counter-increment: section1;
+    background-color: black;
+    width: 50pt;
+    padding: 4.5pt 5pt;
+    color: white;
+    position: absolute;
+    text-align: right;
+    right: 462pt;
+    top: -5pt;
+}
+
+section[data-type="sect2"] {
+    counter-reset: subsection1;
+}
+
+section[data-type="sect2"] h4::before {
+    content: counter(section1)'.'counter(subsection1);
+    counter-increment: subsection1;
+    position: absolute;
+    text-align: right;
+    right: 462pt;
+}
+
+div[data-type="example"] {
+    border: 0.3pt solid black;
+    margin-top: 15pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div[data-type="example"] p {
+    width: calc(var(--width-items) - 10pt);
+}
+
+div[data-type="example"] h5 {
+    background-image: linear-gradient(to right, black, transparent);
+    color: white;
+    padding: 5pt;
+    margin-top: 0 !important;
+    width: var(--width-items);
+    margin-bottom: 10pt;
+}
+
+
+figure {
+    margin: 25pt 0;
+}
+
+figure figcaption {
+    text-align: center;
+}
+
+figure figcaption::before {
+    content: 'Figure: ';
+    font-weight: bold;
+}
+
+figure img {
+    margin: 0 auto;
+    display: block;
+}
+
+
+table {
+    margin: 15pt 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table caption::before {
+    content: 'Caption: ';
+    font-weight: bold;
+}
+
+table thead th {
+    padding: 5pt;
+    background-color: rgb(170, 170, 170);
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgb(223, 223, 223);
+}
+
+table tbody th, table tbody td {
+    padding: 5pt;
+}
+
+table tfoot td {
+    text-align: right;
+    font-style: italic;
+    font-size: 0.75em;
+}
+
+
+section[data-type="glossary"] {
+    border-top: 1.5pt solid black;
+    page-break-before: always;
+}
+
+section[data-type="glossary"] h2 {
+    margin: 15pt 0;
+}
+
+dl[data-type="glossary"] dt {
+    float: left;
+    clear: left;
+    width: 165pt;
+    text-align: left;
+}
+
+/* nth-child() conta TODOS os elementos filhos de um pai */
+/* dl[data-type="glossary"] dt:nth-child(1) {
+    padding-right: 0pt;
+}
+dl[data-type="glossary"] dt:nth-child(3) { 
+    padding-right: 33pt;
+} */
+
+section[data-type="glossary"] dl dd {
+    display: inline;
+}

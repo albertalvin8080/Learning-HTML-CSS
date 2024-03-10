@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body {
+    font-family: monospace;
+}
+
+h1#main-title {
+    text-align: center;
+    border: 1px solid gray;
+    width: fit-content;
+    margin: auto;
+    padding: 2px;
+    outline: 1px dotted blue;
+}
+
+li {
+    margin: 15px 0px;
+    /* padding: 5px 0px; */
+}
+
+a {
+    border: 5px groove gray;
+    font-size: 16px;
+}
+
+a#display-test {
+    display: block;
+    /* width: fit-content; */
+}
+
+a:hover {
+    color: rgb(160, 160, 9);
+}
+
+a:active {
+    color: yellow;
+}
+
+.special::before {
+    content: '→ ';
+}
+
+.special::after{
+    content: ' ←';
+}

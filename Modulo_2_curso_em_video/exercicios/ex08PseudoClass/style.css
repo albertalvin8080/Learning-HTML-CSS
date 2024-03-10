@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'PressStart2P';
+    src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'PressStart2P', fantasy;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h1#main-title {
+    font-size: 2em;
+    text-align: center;
+    color: blue;
+
+}
+
+a:active {
+    /*link selecionado*/
+    color: maroon;
+}
+
+div {
+    width: 600px;
+}
+
+div > p {
+    padding: 3px;
+}
+
+div:hover > p{
+    background-color: black;
+    color: white;
+    /* padding: 3px; */
+}

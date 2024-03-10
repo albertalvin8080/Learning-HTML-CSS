@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 800px;
+    position: relative;
+}
+
+thead, tfoot {
+    color: white;
+    background-color: #383838;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+
+col.c-produto {
+    background-color: yellow;
+}
+
+col.c-preco {
+    background-color: aqua;
+}
+
+col.c-quantidade {
+    background-color: blue;
+}
+
+/* nao fincionou junto com overflow*/
+thead > tr {
+    position: sticky;
+    top: 0;
+}
+
+.container {
+    /* tem que colocar um width na tabela */
+    overflow-x: scroll;
+    /*nao fez nada mesmo com height*/
+    /* overflow-y: auto; */ 
+}

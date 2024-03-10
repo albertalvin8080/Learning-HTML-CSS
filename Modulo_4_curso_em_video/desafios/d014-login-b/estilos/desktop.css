@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+main {
+    width: 1000px;
+    height: 300px;
+}
+
+div#login {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+div#image {
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+
+
+

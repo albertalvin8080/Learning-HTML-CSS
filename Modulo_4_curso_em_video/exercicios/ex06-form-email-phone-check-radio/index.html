@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        div {
+            margin: 10px 0px;
+        }
+        input[type=checkbox] { /* seletor de atributo */
+            margin: 5px 0px;
+        }
+        input[type=radio] {
+            margin: 5px 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testing more forms</h1>
+
+    <form action="teste.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>
+                Login Info
+            </legend>
+            <div>
+                <label for="username">Username:</label><br>
+                <input type="text" name="username" id="username" required minlength="4" maxlength="15" autocomplete="username" placeholder="ex: Jujubinha">
+            </div>
+            <div>
+                <label for="weight">Weight:</label><br>
+                <input type="number" name="weight" id="weight" step="0.1" min="30" max="500">
+            </div>
+            <div>
+                <label for="birth-month">Birth Month:</label><br>
+                <input type="month" name="birth-month" id="birth-month">
+            </div>
+            <div>
+                <label for="birth-hour">Birth Hour:</label><br>
+                <input type="time" name="birth-hour" id="birth-hour" value="21:34">
+            </div>
+            <div>
+                <label for="password">Password:</label><br>
+                <input type="password" name="password" id="password" required minlength="5" maxlength="8">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Complementary Info
+            </legend>
+
+            <div>
+                <label for="id-phone">Phone:</label><br>
+                <input type="tel" name="phone" id="id-phone" pattern="\d{4,5}-\d{4}" autocomplete="tel">
+            </div>
+            <div>
+                <label for="iemail">E-mail:</label><br>
+                <input type="email" name="email" id="iemail" pattern="\w+@\w+(\.\w+){1,}">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Good Games
+            </legend>
+            <div>
+                <input type="checkbox" name="deadcells" id="deadcells">
+                <label for="deadcells">Deadcells</label><br>
+                <input type="checkbox" name="blasphemous" id="blasphemous">
+                <label for="blasphemous">Blasphemous</label><br>
+                <input type="checkbox" name="darksouls" id="darksouls">
+                <label for="darksouls">Dark Souls</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Gender
+            </legend>
+            <div>
+                <input type="radio" name="gender" id="m" value="M"><label for="m">Masculine</label><br>
+
+                <input type="radio" name="gender" id="f" value="F"><label for="f">Feminine</label><br>
+
+                <input type="radio" name="gender" id="non" value="NON" checked><label for="non">Non-binary</label>
+            </div>
+        </fieldset>
+
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>

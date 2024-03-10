@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+h1 {
+    text-align: center;
+    margin: 50px 0px;
+    border: 20px solid transparent;
+    border-image-source: url('images/border-image.png');
+    border-image-slice: 15;
+    border-image-repeat: repeat;
+}

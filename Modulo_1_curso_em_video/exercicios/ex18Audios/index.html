@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audios</title>
+</head>
+<body>
+    <h1>Testando Audios</h1>
+    <p>Esse é o sapo rindo</p>
+    <!-- nao usar .WAV porque eh grande -->
+    <audio preload="metadata" controls loop autoplay>
+        <!-- type(.mpeg, .ogg, .wav) -->
+        <!-- <source src="audios/yt1s.com - frog jump.ogg" type="audio/ogg"> -->
+        <!-- <source src="audios/yt1s.com - frog jump.wav" type="audio/wav"> -->
+        <source src="audios/yt1s.com - frog jump.mp3" type="audio/mpeg">
+
+        <p>Infelizmente, seu navegador não suporta audios. <a href="audios/yt1s.com - frog jump.mp3">Clique aqui</a> para baixá-lo.</p>
+    </audio>
+
+    <p>Esse é o meme sound effect do AAAAUUUGHHHH</p>
+    <audio preload="metadata" controls>
+        <source src="audios/yt1s.com - AAAAUUUGHHHH Meme Sound Effect.mp3" type="audio/mpeg">
+    </audio>
+
+    <p>Esse é o Bruh &#x1F4E3;</p>
+    <audio controls preload="metadata">
+        <source src="audios/yt1s.com - Bru meme sound.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>

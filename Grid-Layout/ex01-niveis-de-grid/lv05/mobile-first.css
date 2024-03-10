@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: lightgray;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(12, 1fr);
+}
+
+div {
+    background-color: darkblue;
+    color: white;
+}
+
+#a {grid-row: 1/2;}
+#b {grid-row: 2/3;}
+/* #c {grid-row: 10/11;} */
+#d {grid-row: 3/10;}
+/* #e {grid-row: 11/12;} */
+/* #f {grid-row: 12/13;} */

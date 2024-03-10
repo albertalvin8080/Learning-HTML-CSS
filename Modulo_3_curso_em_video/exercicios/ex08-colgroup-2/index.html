@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colgroup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <table>
+          <colgroup>
+            <col class="c-aluno" />
+            <col class="c-materia" />
+            <col class="c-notas" span="3"/>
+            <col class="c-media" />
+          </colgroup>
+          <caption>
+            Testando Colgroup
+          </caption>
+          <thead>
+            <tr>
+              <th rowspan="2" scope="col">Aluno</th>
+              <th rowspan="2" scope="col">Materia</th>
+              <th colspan="3" scope="colgroup">Notas</th>
+              <th rowspan="2" scope="col">Media</th>
+            </tr>
+            <tr>
+              <th scope="col">Nota 1</th>
+              <th scope="col">Nota 2</th>
+              <th scope="col">Nota 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>Pedro Afonso</td>
+                <td>Geografia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Pedro Afonso</td>
+                <td>Historia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Pedro Afonso</td>
+                <td>Biologia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Pedro Afonso</td>
+                <td>Matematica</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+    </div>
+  </body>
+</html>
